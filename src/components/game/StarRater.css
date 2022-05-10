@@ -1,0 +1,14 @@
+
+#rating_button {
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .on {
+    color: gold;
+  }
+  .off {
+    color: grey;
+  }

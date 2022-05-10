@@ -1,0 +1,9 @@
+.games{
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    height: 2em;
+    margin: 1em;
+}
