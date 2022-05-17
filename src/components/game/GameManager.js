@@ -107,3 +107,47 @@ export const getGamer = () => {
     })
         .then(response => response.json())
 }
+
+export const createPhoto = (gameId, photo) => {
+    return fetch(`http://localhost:8000/photos?game=${gameId}`, {
+        method: "POST",
+        headers: {
+            "Authorization": `Token ${localStorage.getItem("lu_token")}`,
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(photo)
+    })
+    .then(response => response.json())
+}
+
+export const sendSearchQuery = (query) => {
+    return fetch(`http://localhost:8000/games?q=${query}`, {
+        
+        headers: {
+            "Authorization": `Token ${localStorage.getItem("lu_token")}`,
+            
+        },
+        
+    })
+    .then(response => response.json())
+}
+export const sortList = (params) => {
+    return fetch(`http://localhost:8000/games?orderby=${params}`, {
+        
+        headers: {
+            "Authorization": `Token ${localStorage.getItem("lu_token")}`,
+            
+        },
+        
+    })
+    .then(response => response.json())
+}
+
+export const getGamerRatingForGame = (id) => {
+    return fetch(`http://localhost:8000/ratings?gamer=${id}`, {
+        headers:{
+            "Authorization": `Token ${localStorage.getItem("lu_token")}`
+        }
+    })
+        .then(response => response.json())
+}

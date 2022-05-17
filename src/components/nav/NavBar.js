@@ -12,9 +12,6 @@ export const NavBar = () => {
                     Games
                 </Link>
             </li>
-            <li className="navbar__item">
-                Navigation link
-            </li>
             
             {
                 (localStorage.getItem("lu_token") !== null) ?
